@@ -5,6 +5,7 @@
 mkdir ~/$$-temp
 cd $$-temp
 git clone git://github.com/jamesbucher/JamesBucher-Default-Home-Config.git
+cd JamesBucher-Default-Home-Config
 #Fix Permissions on files
 chmod -R 500 ./default
 #Copy Files to default locations

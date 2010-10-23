@@ -1,0 +1,7 @@
+A Simple GIT Repository to store config files
+that I use on all of my linux/unix systems.
+
+The init-home.sh script checks out the latest
+version of this repository and then copies
+files in the default directory to the home
+folder of the user that is running the script.
