@@ -1,14 +1,26 @@
 #!/bin/bash
 
-
-
 GIT_URL="git://github.com/jamesbucher/JamesBucher-Default-Home-Config.git"
 GIT_DIR="JamesBucher-Default-Home-Config.git"
-#Default SubDir in the git root dir to copy files from
-DEFAULT_DIR="default"
-#If a specific config is specified then use it
-CONFIG_DIR=${1:default}
 TEMP_DIR=$$-temp
+CONFIG_DIR="default"
+
+
+while getopts g:f:t: opt
+do
+    case $opt in
+	-g)    GIT_URL=$OPTARG
+	       shift
+	       ;;
+	-c)    CONFIG_DIR=$OPTARG
+	       shift
+	       ;;
+	-t)    TEMP_DIR=$OPTARG
+	       shift
+	       ;;
+	esac
+        shift
+done
 
 if `mkdir $TEMP_DIR`
 then
@@ -25,10 +37,10 @@ then
             #Copy Files to default locations
 	    cp -RT ./$CONFIG_DIR/ ~/
 	else
-	    printf("Error, Config: \"%s\" was not found.\n");
+	    printf("Error, Config: \"%s\" was not found.\n", $CONFIG_DIR)
 	fi
     else
-	printf("Error, Could not access repository\n")
+	printf("Error, Could not access repository: %s\n", $GIT_URL)
     fi
     #Clean up
     cd ~/
