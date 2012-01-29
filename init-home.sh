@@ -24,9 +24,15 @@ done
 
 if `mkdir $TEMP_DIR`
 then
-    cd $TEMP_DIR
-    #Download proper files
-    git clone $GIT_URL
+  cd $TEMP_DIR
+  #Setup gnome terminal to support solarized colors
+  https://github.com/sigurdga/gnome-terminal-colors-solarized.git
+  cd gnome-terminal-colors-solarized
+  ./install.sh
+
+  #Download proper files
+  git clone $GIT_URL
+
 	cd $GIT_DIR
 	if `ls $CONFIG_DIR`
 	then
@@ -37,8 +43,8 @@ then
 	else
 	    printf "Error, Config: \"%s\" was not found.\n" $CONFIG_DIR
 	fi
-    #Clean up
-    rm -rf $TEMP_DIR
+  #Clean up
+  rm -rf $TEMP_DIR
 else
     printf "Error, Could not create temp dir aborting\n"
 fi

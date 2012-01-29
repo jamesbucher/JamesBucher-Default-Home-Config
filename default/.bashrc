@@ -78,11 +78,9 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
-alias ll='ls -lF'
+alias ll='ls -alF'
 alias la='ls -A'
-alias lal='ls -lAF'
 alias l='ls -CF'
-alias emacs='emacs -nw'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -104,5 +102,22 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-#Set User Variables
-export EDITOR="emacs"
+#BEGIN CUSTOMIZATIONS
+
+#ADDED FOR CLOJURE SUPPORT
+export CLOJURE_EXT=~/bin
+export PATH=$PATH:~/bin/clojure-contrib/launchers/bash
+alias clj=clj-env-dir
+
+#ADDED FOR Leiningen support
+export PATH=$PATH:~/bin/leiningen
+
+#ADDED FOR SOLARIZED ls COLOR SUPPROT
+eval `dircolors ~/bin/bash-extras/dircolors`
+
+#Added for CS450 compilers for convinience
+SITE=$(domainname)
+if [[ $STIE == *cs.wwu.edu ]]
+then
+  export PATH=$PATH:/home/phil/.bin
+fi
