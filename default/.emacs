@@ -11,4 +11,4 @@
   (package-initialize))
 ;;; Set tab spacing
 (setq-default c-basic-offset 4)
-(setq-default c-default-style ((java-mode . "java") (awk-mode . "awk") (c-mode . "k&r") (c++-mode . "k&r") (other . "gnu")))
+(setq-default c-default-style '((java-mode . "java") (awk-mode . "awk") (c-mode . "k&r") (c++-mode . "k&r") (other . "gnu")))
