@@ -353,3 +353,5 @@ client.add_signal("unfocus", function(c) c.border_color = beautiful.border_norma
 awful.util.spawn_with_shell("/usr/lib/gnome-settings-daemon/gnome-settings-daemon")
 awful.util.spawn_with_shell("gnome-sound-applet")
 awful.util.spawn_with_shell("nm-applet")
+awful.util.spawn_with_shell("gnome-keyring-daemon --start")
+awful.util.spwan_with_shell("xmodmap ~/.config/speedswapper")
