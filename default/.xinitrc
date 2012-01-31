@@ -3,6 +3,7 @@ gnome-settings-daemon &
 nm-applet &
 gnome-volume-manager &
 gnome-power-manager &
+xmodmap ~/.config/speedswapper
 eval `gnome-keyring-daemon`  # SSH/GPG agent
 exec awesome                 # awesome receives xinit's process id; when it terminates, X will be terminated
 
