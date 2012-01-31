@@ -120,4 +120,5 @@ SITE=$(domainname)
 if [[ $STIE == *cs.wwu.edu ]]
 then
   export PATH=$PATH:/home/phil/.bin
+  export CVSROOT=/home/bucherj/CVSrep
 fi
