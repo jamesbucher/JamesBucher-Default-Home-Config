@@ -9,3 +9,5 @@
     (load
      (expand-file-name "~/.emacs.d/elpa/package.el"))
   (package-initialize))
+;;; Set tab spacing
+(setq-default c-basic-offset 4)
