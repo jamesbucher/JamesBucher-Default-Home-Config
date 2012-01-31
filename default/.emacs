@@ -1,3 +1,11 @@
-;;Add emacs.d to have emacs load vimpulse
-(add-to-list 'load-path "~/.emacs.d/site-lisp")
-(require 'vimpulse)
+
+
+;;; This was installed by package-install.el.
+;;; This provides support for the package system and
+;;; interfacing with ELPA, the package archive.
+;;; Move this code earlier if you want to reference
+;;; packages in your .emacs.
+(when
+    (load
+     (expand-file-name "~/.emacs.d/elpa/package.el"))
+  (package-initialize))
