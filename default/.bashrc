@@ -116,9 +116,5 @@ export PATH=$PATH:~/bin/leiningen
 eval `dircolors ~/bin/bash-extras/dircolors`
 
 #Added for CS450 compilers for convinience
-SITE=$(domainname)
-if [[ "$STIE""\n" == *cs.wwu.edu ]]
-then
-  export PATH=$PATH:/home/phil/.bin
-  export CVSROOT=/home/bucherj/CVSrep
-fi
+export PATH=$PATH:/home/phil/.bin
+export CVSROOT=/home/bucherj/CVSrep
