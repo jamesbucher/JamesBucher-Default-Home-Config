@@ -14,6 +14,6 @@
 (setq-default c-default-style '((java-mode . "java") (awk-mode . "awk") (c-mode . "k&r") (c++-mode . "k&r") (other . "gnu")))
 
 ;;; Set Evil (Vim emulation)
-(add-to-list ’load-path "~/.emacs.d/evil")
-(require ’evil)
+(add-to-list 'load-path "~/.emacs.d/evil")
+(require 'evil)
 (evil-mode 1)
