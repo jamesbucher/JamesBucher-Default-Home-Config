@@ -117,7 +117,7 @@ eval `dircolors ~/bin/bash-extras/dircolors`
 
 #Added for CS450 compilers for convinience
 SITE=$(domainname)
-if [[ $STIE == *cs.wwu.edu ]]
+if [[ "$STIE""\n" == *cs.wwu.edu ]]
 then
   export PATH=$PATH:/home/phil/.bin
   export CVSROOT=/home/bucherj/CVSrep
