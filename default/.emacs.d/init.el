@@ -103,5 +103,5 @@
 ;;; Actual solarized theme
 (add-to-list 'load-path "~/.emacs.d/color-theme-solarized")
 (require 'color-theme-solarized)
-
+(color-theme-solarized-dark)
 ;;; init.el ends here
