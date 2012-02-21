@@ -99,4 +99,17 @@
      (expand-file-name "~/.emacs.d/elpa/package.el"))
   (package-initialize))
 
+
+;;; Add color-theme for solarized
+(add-to-list 'load-path "~/.emacs.d/color-theme/color-theme.el")
+(require 'color-theme)
+(eval-after-load "color-theme"
+  '(progn
+     (color-theme-initialize)
+     (color-theme-hober)))
+
+;;; Actual solarized theme
+(add-to-list 'load-path "~/.emacs.d/color-theme-solarized")
+(require 'color-theme-solarized)
+
 ;;; init.el ends here
