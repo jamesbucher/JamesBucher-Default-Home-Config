@@ -112,6 +112,9 @@ alias clj=clj-env-dir
 #ADDED FOR Leiningen support
 export PATH=$PATH:~/bin/leiningen
 
+#Set binaries folder in path
+export PATH=$PATH:~/bin
+
 #ADDED FOR SOLARIZED ls COLOR SUPPROT
 eval `dircolors ~/bin/bash-extras/dircolors`
 
